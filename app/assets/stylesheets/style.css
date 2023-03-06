@@ -1,0 +1,521 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+.Head_header {
+  position: relative;
+}
+
+.Head_inner {
+  background-color: #e5e5ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 12px 30px;
+}
+
+.Head_box_first {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+}
+
+.Head_box_second {
+  display: flex;
+}
+
+.Head_box_second1{
+  margin-right: 5px;
+
+}
+
+.Head_box_second2{
+
+}
+
+#Head_btn ul{
+  text-align:center;
+}
+
+#Head_btn ul li{
+  display: inline-block;/*inline-blockにする*/
+  padding: 10px 0;/*余白も指定できる*/
+  margin: 10px 0;/*余白も指定できる*/
+  vertical-align: middle;/*縦の表示位置も指定できる*/
+  font-weight: bold;/*文字を太字に*/
+}
+
+.Headlink_btn{
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0em 1em;
+  color: #656565;
+  border: double 4px #8f76d6;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.Headlink_btn:hover{
+  background: #fff;
+}
+
+.Head_btn a:hover{
+  background:white;
+  color:#8f76d6;
+  border:double 4px #8f76d6;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/* フッター */
+.Foot_footer{
+  background-color: #e5e5ff;
+  color:#808080;
+}
+
+.Foot_logo{
+  margin: 20px,auto;
+  text-align: center;
+}
+
+.Foot_List{
+  overflow: hidden;
+}
+
+.Foot_List ul{
+  display: flex;
+  justify-content: center;
+}
+
+ol,ul{
+  list-style: none;
+}
+
+.Foot_ListItem{
+  padding: 5px 30px 5px 30px;
+  text-align: center;
+  font-size: small;
+}
+.Foot_copyright{
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: xx-small;
+}
+
+
+/* 会員登録 ・ログイン・サロン登録　共通*/
+.registration-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.form-wrap {
+  width: 50%;
+  background-color: white;
+  padding-bottom: 70px;
+}
+
+.form-header {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-header-text {
+  line-height: 100px;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: bold;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-group:first-child {
+  padding: 0;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+  margin-top: 15px;
+
+}
+
+.form-text {
+  font-size: 20px;
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 20px;
+  resize: none;
+}
+
+.info-text {
+  color: #888;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.register-btn {
+  width: 50%;
+  margin: 15px auto;
+}
+
+.register-red-btn {
+  width: 100%;
+  background:  #c248b8;
+  border: 1px solid  #c248b8;
+  color: #fff;
+  line-height: 48px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.required{
+  color: #fff;
+  background-color: #e85298;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+/* ログインのみ情報*/
+.login-btn{
+  width: 50%;
+  margin: 15px auto;
+}
+
+.login-red-btn{
+  width: 100%;
+  background:  #8f76d6;
+  border: 1px solid #8f76d6;
+  color: #fff;
+  line-height: 48px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.login_links{
+  width: 100%;
+  height: 20%;
+  margin-top: 15px;
+}
+
+/*口コミ登録*/
+.comments-text{
+  width: 100%;
+  margin-top: 5px;
+  height: 96px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+}
+
+/*トップページ*/
+.top{
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.top_inner{
+  width: 90%;
+  background-color: white;
+}
+
+.top_image_text{
+  position: relative;
+}
+
+.top_image1{
+  position: relative;
+  width: 100%; /* 幅 */
+  padding-bottom: 30%; /* 幅と同じ高さをつくる */
+  box-sizing: border-box;
+}
+
+.top_image1 img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.top_text1{
+  position:absolute;
+  top: 33%;
+  color: #fff;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  padding: 1em 0;
+  font-size:2em;
+  text-align:center;
+}
+
+.top_menu{
+  margin: 50px auto;
+  text-align: center;
+}
+
+.top_menu_list{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.top_menu_text{
+  display: inline-block;
+  position: relative;
+  color: #656565;
+}
+
+.top_menu_text:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; /*下線の上下位置調整*/
+  display: inline-block;
+  width: 100px; /*下線の幅*/
+  height: 1px; /*下線の太さ*/
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); /*位置調整*/
+  background-color: #666666; /*下線の色*/
+}
+
+.menu_link{
+ margin: 25px auto 50px;
+}
+#menu_link_btn ul {
+  text-align:center /*左右中央寄せは親要素に対して指定*/
+}
+
+/* ↓id=の中のulの中のliに対してCSSを適用*/
+#menu_link_btn ul li { 
+  display: inline-block;/*inline-blockにする*/
+}
+
+.link_btn{
+  display: inline-block;
+  padding: 1em 10em;
+  color: #67c5ff;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+.link_btn:hover {
+  background: #f7eef9;
+}
+
+/*サロン一覧（salon/index）*/
+.main{
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.main_inner{
+  width: 80%;
+  background-color: white;
+}
+
+.salon_lists_wrap{
+}
+
+.salon_list{
+  border: 1px solid #CCCCCC;
+  word-wrap: break-word;
+  color: #656565;
+  margin-top: 10px;
+}
+
+.salon_list_head{
+  font-size: large;
+  font-weight: bolder;
+}
+
+.salon_name{
+  background-color: #F2F2F2;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 1em 1em
+}
+
+.salon_detail{
+  display: inline-block;
+  float: right;
+}
+
+.detail_btn{
+  padding: 0.1em 0.5em;
+  margin-left: 2em;
+  color: #656565;
+  border: 1px solid #656565;
+  border-radius: 3px;
+}
+
+.salon_list_body{
+  display: flex;
+  justify-content: space-around;
+}
+
+.salon_list_image{
+
+}
+
+.salon_list_contents{
+  margin-left: 30px;
+  min-height: 100px;
+  overflow: hidden;
+}
+.salon_list_info{
+  text-align: center;
+  padding: 3em ;
+}
+
+#salon_list_comments{
+  text-align:center
+}
+
+#salon_list_comments  ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.comment_link_btn{
+  display: inline-block;
+  padding: 1em 2em;
+  color: #67c5ff;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+}
+
+/*コメント一覧（comment/index）*/
+.comment_wrap{
+  border: 1px solid #CCCCCC;
+  word-wrap: break-word;
+  color: #656565;
+}
+
+.detail_header{
+  padding: 1em 1em;
+  background-color: #F5F3F1;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.detail_title{
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+  margin: auto 1em;
+}
+
+.comment_list{
+  margin-bottom: 1em;
+}
+
+.comment_item{
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.2em 1em;
+}
+
+.commennt_list{
+  border: 1px solid #CCCCCC;
+  word-wrap: break-word;
+  color: #656565;
+  margin:10px 20px 0
+}
+
+.comment_list_head{
+}
+
+.comment_detail{
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 1em 1em
+}
+
+.comment_post_date{
+  font-size: small;
+  margin-top: 10px;
+}
