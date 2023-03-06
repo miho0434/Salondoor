@@ -1,0 +1,45 @@
+<div class="main">
+  <div class="main_inner">
+  <h2>ネイルサロン一覧</h2>
+   
+    <div class="">
+    </div>
+
+    <% @salons.each do |salon| %>
+    <ul class="salon_lists_wrap">
+      <li class="salon_list">
+        <div class="salon_list_head">
+          <div class="salon_name">
+            <%= link_to salon.store_name, "#" %>
+            <div class="salon_detail">
+            <%= link_to 'サロン詳細', root_path, class: "detail_btn" %></div>
+          </div>
+        </div>
+
+        <div class="salon_list_body">
+          <div class="salon_list_image">
+           <% if salon.image.present?%>
+            <%= image_tag salon.image.variant(gravity: :center, resize:"400x225^", crop:"400x225+0+0").processed , class: "salon-img" if salon.image.attached?%>
+            <% else %>
+           <%= image_tag "sample.JPG" %>
+           <% end %>
+          </div>
+          <div class="salon_list_contents">
+            <div class="salon_list_info">
+              アクセス：<%= salon.prefecture.name%><%= salon.city %>(<%= salon.station %>)
+            </div>
+            <div id="salon_list_comments">
+              <ul>
+               <li><%= link_to '口コミを見る', "#", class: "comment_link_btn" %></li>
+            <li><%= link_to '口コミを投稿する',  "#", class: "comment_link_btn" %></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <% end %>
+
+
+  </div>
+</div>
