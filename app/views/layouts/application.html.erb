@@ -1,15 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Salondoor</title>
+    <title>Salondoor1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%# リセットCSSの設定 %>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
   </head>
+
+  <%# CSS・・・assets/stylesheets/.css %>
+  <div class="container">
+
+  <div class="Head_header">
+  <header>
+    <div class="Head_inner">
+      <div class="Head_box_first">
+        <div class="Head_logo">
+          <%= link_to image_tag("salondoor_logo2.PNG",size: "192x71"), "/"%>
+        </div>
+      </div>
+          
+      <% if worker_signed_in? %>
+      <div class="Head_box_second">
+
+        <div class="Head_box_second1">
+          <div id='Head_btn'>
+            <ul>
+              <li><%= link_to current_worker.nickname, "#", class: "Headlink_btn" %></li>
+              <li><%= link_to "ログアウト", destroy_worker_session_path, method: :delete, class: "Headlink_btn"%></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       
+      <% else %>
+      <div class="Head_box_second"> 
+        <div class="Head_box_second1">
+          <div id='Head_btn'>
+          <ul>
+              <li><%= link_to 'ログイン', worker_session_path, class: "Headlink_btn" %></li>
+              <li><%= link_to '新規登録', new_worker_registration_path, class: "Headlink_btn" %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </header>
+  </div>
+  
+  
+  
 
   <body>
     <%= yield %>
   </body>
+
+
+  <div class="Foot_footer">
+  <footer class>
+    <div class="Foot_logo">
+      <%= link_to image_tag("salondoor_logo2.PNG",size: "115x42"), "/"%>
+    </div>
+    
+    <div class="Foot_List">
+      <ul>
+        <li class="Foot_ListItem"><%= link_to '利用規約', "/" %></li>
+        <li class="Foot_ListItem"><%= link_to 'プライバシーポリシー', "/" %></li>
+        <li class="Foot_ListItem"><%= link_to 'ヘルプ', "/" %></li>
+        <li class="Foot_ListItem"><%= link_to 'サイトマップ', "/" %></li>
+      </ul>
+    </div>
+    <div class="Foot_copyright">
+      Copyright © SALONDOOR All rights reserved.
+    </div>
+  </footer>
+  </div>
+  </div>
+
+</div>
 </html>
