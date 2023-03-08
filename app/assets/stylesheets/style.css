@@ -439,7 +439,7 @@ ol,ul{
 
 }
 
-.salon-img{
+.salon-img1{
   width: 400px;
   height: 225px;
   object-fit: cover;
@@ -477,6 +477,12 @@ ol,ul{
   border: 1px solid #CCCCCC;
   word-wrap: break-word;
   color: #656565;
+}
+
+.salon-img2{
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
 }
 
 .detail_header{

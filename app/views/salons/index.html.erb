@@ -19,7 +19,7 @@
         <div class="salon_list_body">
           <div class="salon_list_image">
            <% if salon.image.present?%>
-            <%= image_tag salon.image , class: "salon-img" if salon.image.attached?%>
+            <%= image_tag salon.image , class: "salon-img1" if salon.image.attached?%>
             <% else %>
            <%= image_tag "sample.JPG" %>
            <% end %>
@@ -30,8 +30,8 @@
             </div>
             <div id="salon_list_comments">
               <ul>
-               <li><%= link_to '口コミを見る', "#", class: "comment_link_btn" %></li>
-            <li><%= link_to '口コミを投稿する',  "#", class: "comment_link_btn" %></li>
+                <li><%= link_to '口コミを見る', salon_comments_path(salon.id), class: "comment_link_btn" %></li>
+                <li><%= link_to '口コミを投稿する',  new_salon_comment_path(salon.id), class: "comment_link_btn" %></li>
             </ul>
             </div>
           </div>

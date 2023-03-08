@@ -1,6 +1,7 @@
 class SalonsController < ApplicationController
   def index
     @salons = Salon.order("created_at DESC")
+    @comment = Comment.new
   end
 
   def new
