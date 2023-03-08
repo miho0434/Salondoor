@@ -19,7 +19,7 @@
         <div class="salon_list_body">
           <div class="salon_list_image">
            <% if salon.image.present?%>
-            <%= image_tag salon.image.variant(gravity: :center, resize:"400x225^", crop:"400x225+0+0").processed , class: "salon-img" if salon.image.attached?%>
+            <%= image_tag salon.image , class: "salon-img" if salon.image.attached?%>
             <% else %>
            <%= image_tag "sample.JPG" %>
            <% end %>

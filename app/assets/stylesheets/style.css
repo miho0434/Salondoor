@@ -439,6 +439,12 @@ ol,ul{
 
 }
 
+.salon-img{
+  width: 400px;
+  height: 225px;
+  object-fit: cover;
+}
+
 .salon_list_contents{
   margin-left: 30px;
   min-height: 100px;
