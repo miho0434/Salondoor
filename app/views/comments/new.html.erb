@@ -59,9 +59,20 @@
     </div>
 
 <% else %>
-  <strong><p>※※※ 口コミの投稿にはログインが必要です ※※※</p></strong>
-  ▶︎<%= link_to 'ログイン', worker_session_path, class: "login" %>
-  ▶︎<%= link_to '新規登録', new_worker_registration_path, class: "sign-up" %>
+<div class="top_menu">
+     <div class="top_menu_list">
+      <h3 class>※ 口コミの投稿にはログインが必要です ※</h3>
+      <div class="menu_link">
+        <div id="menu_link_btn">
+          <ul>
+            <li><%= link_to 'ログイン', worker_session_path, class: "link_btn" %></li>
+            <li><%= link_to '新規登録', new_worker_registration_path, class: "link_btn" %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+ 
 <% end %>
   </div>
 </div>
