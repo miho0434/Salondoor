@@ -8,6 +8,6 @@ class Comment < ApplicationRecord
     validates :reason_for_retirement 
   end
 
-  belongs to :worker
-  belongs to :salon
+  belongs_to :worker
+  belongs_to :salon
 end
