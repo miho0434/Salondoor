@@ -531,3 +531,49 @@ ol,ul{
   font-size: small;
   margin-top: 10px;
 }
+
+/*サロン詳細（salon/show）*/ 
+.salon_section_main{
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.salon_section_inner{
+  width: 50%;
+  background-color: white;
+}
+
+.salon_section{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 30px;
+
+}
+
+.info_heading{
+  padding: 0.5em 1em;/*上下 左右の余白*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #bfa6f2;/*左線*/
+}
+
+.info_subtitle{
+  margin-bottom: 12px;
+}
+
+.info_detail{
+  padding-left: 1em;
+  line-height: 22px;
+  text-indent: -1em;
+  font-size: medium;
+}
+
+
+
+
+

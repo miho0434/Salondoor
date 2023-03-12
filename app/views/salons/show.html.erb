@@ -1,0 +1,57 @@
+<div class="salon_section_main">
+<div class="salon_section_inner">
+  <div class="comment_wrap">
+
+    <div class="detail_header">
+      <div class="salon_list_image">
+        <% if @salon.image.present?%>
+          <%= image_tag @salon.image , class: "salon-img2" if @salon.image.attached?%>
+          <% else %>
+          <%= image_tag "sample2.JPG" %>
+        <% end %>
+      </div>
+      <div class="detail_title">
+        <h3><%= @salon.store_name %>の情報</h3>
+      </div>
+    </div>
+
+  
+    <div class="salon_section">
+      <div class="salon_info">
+        <h3 class="info_heading">店舗情報</h3>
+        <div class="info_wrap">
+          <h4 class="info_subtitle">所在地</h4>
+            <div class="info_detail">
+              <%= @salon.prefecture.name %><%= @salon.city %><%= @salon.street_number %><%= @salon.building_name%>
+            </div>
+          <h4 class="info_subtitle">最寄駅</h4>
+            <div class="info_detail">
+              <%= @salon.station %>
+            </div>            
+        </div>
+      </div>
+
+      <div class="salon_info">
+        <h3 class="info_heading">企業情報</h3>
+        <div class="info_wrap">
+          <h4 class="info_subtitle">企業名</h4>
+          <div class="info_detail">
+            <%= @salon.corporate_name %>
+          </div>
+          <div class="info_wrap">
+            <h4 class="info_subtitle">設立年</h4>
+          <div class="info_detail">
+            <%= @salon.established%>年
+          </div>
+
+          <div class="info_wrap">
+            <h4 class="info_subtitle">店舗数</h4>
+          <div class="info_detail">
+            <%= @salon.offices%>店舗
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
